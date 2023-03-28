@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#f2f2f2"
+             Shell.NavBarIsVisible="False"
+             x:Class="Ch2Ex11.MainPage">
+
+    <ScrollView>
+        <StackLayout
+            Orientation="Vertical">
+            <StackLayout
+                x:Name="StackLayoutBackground"
+                BackgroundColor="#2f5794"
+
+            Padding="16"
+>
+                <Label
+            FontAttributes="Bold"
+            FontSize="30"
+            TextColor="White"
+            Text="13 Jan 2023"/>
+                <Image
+                    Margin="-20,0,0,0"
+            WidthRequest="350"
+            HeightRequest="250"
+            Source="cloud"/>
+                <Label
+                    x:Name="TempBig"
+                TextColor="White"
+                Text="8&#186;"
+                FontSize="100"
+                FontAttributes="Bold"/>
+                <Label
+            FontAttributes="Bold"
+            FontSize="30"
+            TextColor="White"
+            Text="Cold"
+            />
+
+            </StackLayout>
+           <Label
+            Margin="16,20,0,0"
+            FontSize="30"
+            TextColor="Black"
+            Text="Valsad"/>
+
+            <StackLayout
+                Spacing="5"
+                Padding="16"
+                VerticalOptions="EndAndExpand"
+                Orientation="Horizontal">
+                <ImageButton
+                    Clicked="ImageDown_Clicked"
+                    BackgroundColor="#2f5794"
+                    Padding="10"
+                    Source="icons_down"
+                    CornerRadius="30"
+                    HeightRequest="80"
+                    WidthRequest="80"
+                    HorizontalOptions="StartAndExpand"
+                    />
+                <Label
+                    FontSize="30"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Set:"/>
+                <Label
+                    x:Name="TempSmall"
+                     FontSize="30"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="8&#186;C"/>
+                <ImageButton
+                    Clicked="ImageUp_Clicked"
+                    BackgroundColor="#2f5794"
+                    Padding="10"
+                    Source="icons_up"
+                    CornerRadius="30"
+                    HeightRequest="80"
+                    WidthRequest="80"
+                    HorizontalOptions="EndAndExpand"/>
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

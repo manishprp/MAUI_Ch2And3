@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="Ch3Ex3.MainPage">
+
+    <ScrollView>
+        <StackLayout
+            Spacing="10"
+            Padding="16">
+            <Label
+                Margin="0,0,0,40"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="40"
+                Text="Delete Profile"/>
+            <RadioButton
+                FontAttributes="Bold"
+                FontSize="15"
+                Content="Something was broken"/>
+            <Line
+                Margin="30,5,0,5"
+                BackgroundColor="#e2e2e2"
+                HeightRequest="1"/>
+            <RadioButton
+                FontSize="15"
+                FontAttributes="Bold"
+                Content="I am not getting any invites"/>
+            <Line
+                Margin="30,5,0,5"
+                BackgroundColor="#e2e2e2"
+                HeightRequest="1"/>
+            <RadioButton
+                FontSize="15"
+                FontAttributes="Bold"
+                Content="I have privacy concern"/>
+            <Line
+                Margin="30,5,0,5"
+                BackgroundColor="#e2e2e2"
+                HeightRequest="1"/>
+            <RadioButton
+                x:Name="Other"
+                FontSize="15"
+                FontAttributes="Bold"
+                Content="Other"/>
+            <Frame
+                BindingContext="{x:Reference Other}"
+                IsVisible="{Binding IsChecked}"
+                Padding="15"
+                VerticalOptions="FillAndExpand">
+                <Editor
+                    Placeholder="Your explanationis entirely optional..."
+                    MaxLength="30"
+                />
+            </Frame
+                >
+            <Button
+                VerticalOptions="End"
+                BackgroundColor="#135c69"
+                Text="Continue"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White"
+             xmlns:viewModel ="clr-namespace:Ch3ex6.ViewModel"
+             x:Class="Ch3ex6.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:TipCalculatorViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout
+            Spacing="15"
+            BackgroundColor="#689beb"
+            Padding="16">
+            <Label
+                HorizontalOptions="Center"
+                FontSize="35"
+                FontAttributes="Bold"
+                TextColor="Black"
+                Text="Tip calculator"/>
+            <Frame>
+                <Grid
+                    ColumnDefinitions="1*,1*">
+                    <StackLayout
+                        Grid.Column="0"
+                        Spacing="20"
+                        Orientation="Vertical">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Enter Bill amount:"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Tip:"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Total:"/>
+                        </StackLayout>
+                    
+                    <StackLayout
+                        Grid.Column="1"
+                        Spacing="20"
+                        Orientation="Vertical">
+                        <Entry
+                            
+                            Margin="0,-15,0,0"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            Text="{Binding Amount}"/>
+                        <Label
+                            Margin="0,-5,0,0"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding Tip}"/>
+                        <Label
+                            Margin="0,-5,0,0"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding Total}"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <Frame>
+                <StackLayout
+                    Spacing="15">
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Tip"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding TipPercenrage, StringFormat='{0}%'}"/>
+                    </StackLayout>
+
+                    <Slider
+                        DragCompletedCommand="{Binding TipChangeCommand}"
+                        Value="{Binding TipPercenrage}"
+                        Maximum="100"
+                        Minimum="0"
+                        MinimumTrackColor="Coral"
+                        ThumbColor="#78adae"
+                        />
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Split"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding SplitBetween}"/>
+                    </StackLayout>
+
+                    <Slider
+                        DragCompletedCommand="{Binding TipChangeCommand}"
+                        Value="{Binding SplitBetween}"
+                        Maximum="20"
+                        Minimum="1"
+                        MinimumTrackColor="Coral"
+                        ThumbColor="#78adae"
+                        />
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Split Total"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            TextColor="#78adae"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="{Binding PerPersonCost}"/>
+                    </StackLayout>
+
+                </StackLayout>
+                
+                
+                
+                
+                
+                
+                
+            </Frame>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

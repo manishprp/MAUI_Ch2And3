@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#353535"
+             xmlns:viewModel="clr-namespace:Ch3Ex2.ViewModel"
+             x:Class="Ch3Ex2.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:ConverterViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid
+            Padding="16"
+            ColumnSpacing="10"
+            ColumnDefinitions="1*,1*">
+            <StackLayout
+                Grid.Column="0">
+                <Entry
+                    Text="{Binding FromValue}"
+                    Keyboard="Numeric"
+                    FontSize="Medium"
+                    TextColor="White"/>
+                <Label
+                    Text="From"
+                    FontSize="Small"
+                    TextColor="#acacac"/>
+                <RadioButton
+                    IsChecked="{Binding FromCelsius}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Celsius"/>
+                <RadioButton
+                    IsChecked="{Binding FromFahrenheit}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Fahrenheit"/>
+                <RadioButton
+                    IsChecked="{Binding FromKelvin}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Kelvin"/>
+            </StackLayout>
+
+            
+            
+            <StackLayout
+                Grid.Column="1">
+                <Entry
+                    Text="{Binding Result}"
+                    Keyboard="Numeric"
+                    FontSize="Medium"
+                    TextColor="White"/>
+                <Label
+                    Text="To"
+                    FontSize="Small"
+                    TextColor="#acacac"/>
+                <RadioButton
+                    IsChecked="{Binding ToCelsius}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Celsius"/>
+                <RadioButton
+                    IsChecked="{Binding ToFahrenheit}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Fahrenheit"/>
+                <RadioButton
+                    IsChecked="{Binding ToKelvin}"
+                    CheckedChanged="RadioButton_CheckedChanged"
+                    TextColor="White"
+                    Content="Kelvin"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#f2e3e0"
+             Padding="5,2,5,0"
+             xmlns:viewmodel="clr-namespace:c3ex5.ViewModel"
+             Shell.NavBarIsVisible="False"
+             x:Class="c3ex5.MainPage">
+    <ContentPage.BindingContext>
+        <viewmodel:ShoppingViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Border
+            StrokeShape="RoundRectangle 30">
+        <StackLayout
+            BackgroundColor="White">
+                <StackLayout
+                    Padding="20"
+                    Spacing="20">
+                    <Label
+                    Margin="0,10,0,25"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="My Cart"/>
+            <!--1st  element-->
+                <StackLayout
+                    
+                    Orientation="Horizontal">
+                    <CheckBox
+                        IsChecked="{Binding RadioButtonOne}"
+                        />
+                    <Border
+                        HorizontalOptions="FillAndExpand"
+                    StrokeShape="RoundRectangle 15"
+                                                                >
+                        <StackLayout
+                            Padding="5,0,5,0"
+                            Orientation="Horizontal"
+                        BackgroundColor="#f9f4f0"
+                        HorizontalOptions="FillAndExpand">
+                            <AbsoluteLayout
+                            HeightRequest="110">
+
+                                <Frame
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            AbsoluteLayout.LayoutBounds="0.2,0.6"
+                            CornerRadius="20"
+                            WidthRequest="80"
+                            HeightRequest="70"
+                            BorderColor="White"
+                            BackgroundColor="White"/>
+                                <Image
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Source="water_bottle"/>
+                            </AbsoluteLayout>
+
+                            <StackLayout
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="5">
+                                <Label
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="Aquafina Bottle"/>
+                                <Label
+                                    FontSize="12"
+                                    TextColor="#a39f9e"
+                                    FontAttributes="Bold"
+                                    Text="Size : 35.5 cl/ 355 ml"/>
+
+                                <StackLayout
+                                        Margin="0,10,0,0"
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Horizontal">
+
+                                    <Label
+                                    HorizontalOptions="StartAndExpand"
+                                    TextColor="#191c46"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="{Binding TotalPriceOne, StringFormat='${0}'} "/>
+
+                                    <Border
+                                            BackgroundColor="#827e7b"
+                                            Stroke="#827e7b"
+                                            StrokeShape="RoundRectangle 30">
+                                        <StackLayout
+                                                HeightRequest="30"
+                                                BackgroundColor="#f8f4f1"
+                                            Orientation="Horizontal">
+                                            <Button
+                                                Command="{Binding DecreementCommand}"
+                                                CommandParameter="-One"
+                                                Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="-"/>
+                                            <Label
+                                                Text="{Binding QuantityOne}"
+                                                VerticalOptions="CenterAndExpand"
+                                                BackgroundColor="#f8f4f1"
+                                                FontSize="12"
+                                                TextColor="Black"
+                                                />
+                                            <Button
+                                                Command="{Binding IncreementCommand}"
+                                                CommandParameter="+One"
+                                                Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="+"/>
+
+
+                                        </StackLayout>
+
+                                    </Border>
+
+                                </StackLayout>
+
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Border>
+
+                    <Button
+                        VerticalOptions="Start"
+                        Margin="-15,-15,0,0"
+                            BackgroundColor="#e1dfdd"
+                            TextColor="White"
+                            Text="x"
+                            FontAttributes="Bold"
+                            Padding="0,0,0,3"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            FontSize="Small"
+                            CornerRadius="25"
+                           />
+
+
+
+                </StackLayout>
+            
+            
+                <!--2nd  element-->
+                    <StackLayout
+                    
+                    Orientation="Horizontal">
+                        <CheckBox
+                            IsChecked="{Binding RadioButtonTwo}"
+                        />
+                        <Border
+                        HorizontalOptions="FillAndExpand"
+                    StrokeShape="RoundRectangle 15"
+                                                                >
+                            <StackLayout
+                            Padding="5,0,5,0"
+                            Orientation="Horizontal"
+                        BackgroundColor="#f9f4f0"
+                        HorizontalOptions="FillAndExpand">
+                                <AbsoluteLayout
+                            HeightRequest="110">
+
+                                    <Frame
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            AbsoluteLayout.LayoutBounds="0.2,0.6"
+                            CornerRadius="20"
+                            WidthRequest="80"
+                            HeightRequest="70"
+                            BorderColor="White"
+                            BackgroundColor="White"/>
+                                    <Image
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Source="coca_cola"/>
+                                </AbsoluteLayout>
+
+                                <StackLayout
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="5">
+                                    <Label
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="Coca Cola"/>
+                                    <Label
+                                    FontSize="12"
+                                    TextColor="#a39f9e"
+                                    FontAttributes="Bold"
+                                    Text="Size : 35.5 cl/ 355 ml"/>
+
+                                    <StackLayout
+                                        Margin="0,10,0,0"
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Horizontal">
+
+                                        <Label
+                                        HorizontalOptions="StartAndExpand"
+                                        TextColor="#191c46"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="{Binding TotalPriceTwo,StringFormat='${0}'}"/>
+
+                                        <Border
+                                            BackgroundColor="#827e7b"
+                                            Stroke="#827e7b"
+                                            StrokeShape="RoundRectangle 30">
+                                            <StackLayout
+                                                HeightRequest="30"
+                                                BackgroundColor="#f8f4f1"
+                                            Orientation="Horizontal">
+                                                <Button
+                                                Command="{Binding DecreementCommand}"
+                                                    CommandParameter="-Two"
+                                                Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="-"/>
+                                                <Label
+                                                    
+                                                VerticalOptions="CenterAndExpand"
+                                                BackgroundColor="#f8f4f1"
+                                                FontSize="12"
+                                                TextColor="Black"
+                                                Text="{Binding QuantityTwo}"/>
+                                                <Button
+                                                    Command="{Binding IncreementCommand}"
+                                                    CommandParameter="+Two"
+                                                Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="+"/>
+
+
+                                            </StackLayout>
+
+                                        </Border>
+
+                                    </StackLayout>
+
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Border>
+
+                        <Button
+                        VerticalOptions="Start"
+                        Margin="-15,-15,0,0"
+                            BackgroundColor="#e1dfdd"
+                            TextColor="White"
+                            Text="x"
+                            FontAttributes="Bold"
+                            Padding="0,0,0,3"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            FontSize="Small"
+                            CornerRadius="25"
+                           />
+
+
+
+                    </StackLayout>
+                    <!--3rd  element-->
+                    <StackLayout
+                    
+                    Orientation="Horizontal">
+                        <CheckBox
+                            IsChecked="{Binding RadioButtonThree}"
+                        />
+                        <Border
+                        HorizontalOptions="FillAndExpand"
+                    StrokeShape="RoundRectangle 15"
+                                                                >
+                            <StackLayout
+                            Padding="5,0,5,0"
+                            Orientation="Horizontal"
+                        BackgroundColor="#f9f4f0"
+                        HorizontalOptions="FillAndExpand">
+                                <AbsoluteLayout
+                            HeightRequest="110">
+
+                                    <Frame
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            AbsoluteLayout.LayoutBounds="0.2,0.6"
+                            CornerRadius="20"
+                            WidthRequest="80"
+                            HeightRequest="70"
+                            BorderColor="White"
+                            BackgroundColor="White"/>
+                                    <Image
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Source="pepsi"/>
+                                </AbsoluteLayout>
+
+                                <StackLayout
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="5">
+                                    <Label
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="Pepsi"/>
+                                    <Label
+                                    FontSize="12"
+                                    TextColor="#a39f9e"
+                                    FontAttributes="Bold"
+                                    Text="Size : 35.5 cl/ 355 ml"/>
+
+                                    <StackLayout
+                                        Margin="0,10,0,0"
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Horizontal">
+
+                                        <Label
+                                        HorizontalOptions="StartAndExpand"
+                                        TextColor="#191c46"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    Text="{Binding TotalPriceThree, StringFormat='${0}'}"/>
+
+                                        <Border
+                                            BackgroundColor="#827e7b"
+                                            Stroke="#827e7b"
+                                            StrokeShape="RoundRectangle 30">
+                                            <StackLayout
+                                                HeightRequest="30"
+                                                BackgroundColor="#f8f4f1"
+                                            Orientation="Horizontal">
+                                                <Button
+                                                    Command="{Binding DecreementCommand}"
+                                                    CommandParameter="-Three"
+                                                Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="-"/>
+                                                <Label
+                                                    
+                                                VerticalOptions="CenterAndExpand"
+                                                BackgroundColor="#f8f4f1"
+                                                FontSize="12"
+                                                TextColor="Black"
+                                                Text="{Binding QuantityThree}"/>
+                                                <Button
+                                                    Command="{Binding IncreementCommand}"
+                                                    CommandParameter="+Three"
+                                                     Padding="0,0,0,2"
+                                                TextColor="Black"
+                                                BackgroundColor="#f8f4f1"
+                                                Text="+"/>
+
+
+                                            </StackLayout>
+
+                                        </Border>
+
+                                    </StackLayout>
+
+
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Border>
+
+                        <Button
+                        VerticalOptions="Start"
+                        Margin="-15,-15,0,0"
+                            BackgroundColor="#e1dfdd"
+                            TextColor="White"
+                            Text="x"
+                            FontAttributes="Bold"
+                            Padding="0,0,0,3"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            FontSize="Small"
+                            CornerRadius="25"
+                           />
+
+
+
+                    </StackLayout>
+
+                    <!--Promocode-->
+
+                <Frame
+                    CornerRadius="15"
+                    Padding="10"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Entry
+                            Text="{Binding PromoCode}"
+                            HorizontalOptions="FillAndExpand"
+                            FontSize="Small"
+                            Placeholder="Promo code"/>
+                        <Button
+                            Command="{Binding ApplyPromocodeCommand}"
+                            Padding="15"
+                            FontAttributes="Bold"
+                            CornerRadius="15"
+                            BackgroundColor="#021159"
+                            HorizontalOptions="End"
+                            Text="Apply"/>
+
+
+                    </StackLayout>
+
+                </Frame>
+            <!--subtotal-->
+                <StackLayout
+                   
+                    Orientation="Horizontal">
+                    <Label
+
+                        FontSize="Small"
+                        TextColor="#807f86"
+                        Text="Sub Total:"/>
+                    <Label
+                        HorizontalOptions="EndAndExpand"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        TextColor="#807f86"
+                        Text="{Binding SubTotalPrice, StringFormat='$ {0}'}"/>
+
+                </StackLayout>
+
+                <!--Shipping-->
+                <StackLayout
+                   
+                    Orientation="Horizontal">
+                    <Label
+
+                        FontSize="Small"
+                        TextColor="#807f86"
+                        Text="Shipping:"/>
+                    <Label
+                        HorizontalOptions="EndAndExpand"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        TextColor="#807f86"
+                        Text="{Binding ShippingPrice, StringFormat='$ {0}'}"/>
+
+                   
+
+                </StackLayout>
+                <Line
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,-14,0,0"
+                    BackgroundColor="#807f86"
+                    HeightRequest="1"/>
+                </StackLayout>
+                <Frame
+                    CornerRadius="30"
+                    Padding="25,30,30,25"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="#021159">
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <StackLayout
+                            Orientation="Vertical">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="12"
+                                TextColor="#b0bdf8"
+                                Text="{Binding TotalItems, StringFormat='Total : ({0} items)'}"/>
+                                <Label
+                                    
+                                    FontSize="35"
+                                    FontAttributes="Bold"
+                                    Text="{Binding TotalPrice, StringFormat='${0}'}"
+                                    TextColor="#f2f7fa"
+                                    />
+
+
+                        </StackLayout>
+                        <Button
+                            HorizontalOptions="EndAndExpand"
+                            CornerRadius="15"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            HeightRequest="50"
+                            BackgroundColor="#f2f7fa"
+                            TextColor="#021159"
+                            Text="Proceed to checkout"/>
+                    </StackLayout>
+                    
+                    
+                </Frame>
+        </StackLayout>
+            
+        </Border>
+    </ScrollView>
+
+</ContentPage>

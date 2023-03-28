@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="Ch3Ex4.MainPage">
+
+    <ScrollView>
+        <StackLayout
+            Spacing="10"
+            Padding="16">
+            <Label
+                Margin="0,0,0,40"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="40"
+                Text="Delete Profile"/>
+            <Label
+                FontSize="15"
+                FontAttributes="Bold"
+                TextColor="Black"
+                Text="It is advisable for you to request your data to be sent to your email"/>
+            <StackLayout
+                Margin="0,0,0,80"
+                Spacing="0"
+                Padding="0"
+                Orientation="Horizontal">
+                <CheckBox
+                    x:Name="CheckBoxx"
+                    Margin="0"
+                    HorizontalOptions="Fill"
+                />
+                <Label
+                    VerticalOptions="Center"
+                     FontSize="15"
+                FontAttributes="Bold"
+                TextColor="Black"
+                Text="Yes, send my data to my email"/>
+            </StackLayout>
+            <Button
+                BindingContext="{x:Reference CheckBoxx}"
+                IsEnabled="{Binding IsChecked}"
+                HeightRequest="50"
+                TextTransform="Uppercase"
+                Text="Confirm Deletion"
+                BackgroundColor="#e7494c"/>
+            <Label
+                FontSize="15"
+                FontAttributes="Bold"
+                TextColor="#b4b3af"
+                Text="You will permanently lose all your reviews, contacts, messages, and profile info. After this, there is no turning back."/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

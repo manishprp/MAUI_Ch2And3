@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="16"
+             xmlns:viewModel="clr-namespace:Ch3Ex8.ViewModel"
+             x:Class="Ch3Ex8.MainPage">
+    <ContentPage.BindingContext>
+
+        <viewModel:QuestionViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout>
+            <Frame
+                Padding="0"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout
+                    Padding="16"
+                    Spacing="20">
+                    <Label
+                        Text="{Binding Question}"/>
+                    <Grid
+                        ColumnDefinitions="1*,1*">
+                        <RadioButton
+                            IsChecked="{Binding IsYes}"
+                            Grid.Column="0"
+                            Content="Yes"/>
+                        <RadioButton
+                            IsChecked="{Binding IsNo}"
+                            Grid.Column="1"
+                            Content="No"/>
+                    </Grid>
+                    <Button
+                        Command="{Binding NextCommand}"
+                        Text="NEXT"/>
+                </StackLayout>
+            </Frame>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             Shell.NavBarIsVisible="false"
+             Padding="16"
+             BackgroundColor="#f7f7f7"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch2Ex9.MainPage">
+
+    <ScrollView>
+        <StackLayout
+            Spacing="15">
+            <StackLayout
+                Orientation="Horizontal">
+                <Image
+                    HorizontalOptions="StartAndExpand"
+                    WidthRequest="30"
+                    HeightRequest="40"
+                    Source="left_arrow"/>
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    Text="Search"/>
+                <Image
+                    HorizontalOptions="EndAndExpand"
+                    Source="dotnet_bot"
+                    HeightRequest="40"
+                    WidthRequest="40"/>
+
+            </StackLayout>
+            <Label
+                TextColor="Black"
+                HorizontalOptions="Start"
+                Text="35 Job Opportunities"
+                FontAttributes="Bold"
+                FontSize="Medium"/>
+            <Grid
+                ColumnSpacing="15"
+                RowDefinitions="60"
+                ColumnDefinitions="1*,1*">
+                <Button
+                    Grid.Column="0"
+                    FontSize="Small"
+                    Text="Most Relevent"
+                    TextColor="White"
+                    BackgroundColor="Black"/>
+                <Button
+                    Grid.Column="1"
+                    FontSize="Small"
+                    Text="Most Relevent"
+                    TextColor="#909090"
+                    BackgroundColor="White"/>
+            </Grid>
+
+            <Frame
+                CornerRadius="20"
+                BorderColor="#f4f4f4">
+                <StackLayout
+                    Spacing="20"
+                    Orientation="Horizontal">
+                    <Image
+                        HorizontalOptions="Start"
+                        WidthRequest="45"
+                        HeightRequest="45"
+                        Source="facebook"/>
+                    <StackLayout
+                        Spacing="3">
+                        <Label
+                            FontSize="Small"
+                            Text="Facebook"
+                            TextColor="#aeaeae"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="UI/UX Designer"
+                            TextColor="Black"/>
+                        <Label
+                            Margin="0,3,0,0"
+                            FontSize="Small"
+                            Text="$4500/m Toronto, Canada"
+                            TextColor="#aeaeae"/>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="EndAndExpand">
+                        <ImageButton
+                            Clicked="ImageButton_Clicked"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Source="new_heart"/>
+                        <Label
+                            VerticalOptions="EndAndExpand"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            Text="06h"
+                            TextColor="#929292"/>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+                
+                
+                
+            </Frame>
+
+
+            <!--<Item. 2>-->
+
+            <Frame
+                CornerRadius="20"
+                BorderColor="#f4f4f4">
+                <StackLayout
+                    Spacing="20"
+                    Orientation="Horizontal">
+                    <Image
+                        HorizontalOptions="Start"
+                        WidthRequest="45"
+                        HeightRequest="45"
+                        Source="dribble"/>
+                    <StackLayout
+                        Spacing="3">
+                        <Label
+                            FontSize="Small"
+                            Text="Dribble"
+                            TextColor="#aeaeae"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="Product Designer"
+                            TextColor="Black"/>
+                        <Label
+                            Margin="0,3,0,0"
+                            FontSize="Small"
+                            Text="6000/m Toronto, Canada"
+                            TextColor="#aeaeae"/>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="EndAndExpand">
+                        <ImageButton
+                            Clicked="ImageButton_Clicked"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Source="new_heart"/>
+                        <Label
+                            VerticalOptions="EndAndExpand"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            Text="12h"
+                            TextColor="#929292"/>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+            </Frame>
+            <!--<Item. 3 facebook>-->
+            <Frame
+                CornerRadius="20"
+                BorderColor="#f4f4f4">
+                <StackLayout
+                    Spacing="20"
+                    Orientation="Horizontal">
+                    <Image
+                        HorizontalOptions="Start"
+                        WidthRequest="45"
+                        HeightRequest="45"
+                        Source="facebook"/>
+                    <StackLayout
+                        Spacing="3">
+                        <Label
+                            FontSize="Small"
+                            Text="Facebook"
+                            TextColor="#aeaeae"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="UI/UX Designer"
+                            TextColor="Black"/>
+                        <Label
+                            Margin="0,3,0,0"
+                            FontSize="Small"
+                            Text="$4500/m Toronto, Canada"
+                            TextColor="#aeaeae"/>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="EndAndExpand">
+                        <ImageButton
+                            Clicked="ImageButton_Clicked"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Source="heart"/>
+                        <Label
+                            VerticalOptions="EndAndExpand"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            Text="06h"
+                            TextColor="#929292"/>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+            </Frame>
+
+
+            <!--item 4-->
+            <Frame
+                CornerRadius="20"
+                BorderColor="#f4f4f4">
+                <StackLayout
+                    Spacing="20"
+                    Orientation="Horizontal">
+                    <Image
+                        HorizontalOptions="Start"
+                        WidthRequest="45"
+                        HeightRequest="45"
+                        Source="dribble"/>
+                    <StackLayout
+                        Spacing="3">
+                        <Label
+                            FontSize="Small"
+                            Text="Dribble"
+                            TextColor="#aeaeae"/>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="Product Designer"
+                            TextColor="Black"/>
+                        <Label
+                            Margin="0,3,0,0"
+                            FontSize="Small"
+                            Text="6000/m Toronto, Canada"
+                            TextColor="#aeaeae"/>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="EndAndExpand">
+                        <ImageButton
+                            Clicked="ImageButton_Clicked"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Source="new_heart"/>
+                        <Label
+                            VerticalOptions="EndAndExpand"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            Text="12h"
+                            TextColor="#929292"/>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+            </Frame>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
